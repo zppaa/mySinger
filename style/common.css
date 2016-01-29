@@ -1,0 +1,164 @@
+html{  font-size: 100px; min-height: 100%;}
+@media (min-width:320px) {html { font-size:100px !important;}}
+@media (min-width:360px) {html { font-size:112px !important;}}
+@media (min-width:400px) {html { font-size:125px !important;}}
+@media (min-width:480px) { html { font-size:150px !important;}}
+@media (min-width:540px) {html { font-size:168px !important;}}
+@media (min-width:640px) {html { font-size:200px !important;}}
+@media (min-width:720px) {html { font-size:225px !important;}}
+@media (min-width:768px) {html { font-size:240px !important;}}
+@media (min-width:800px) {html { font-size:250px !important;}}
+@media (min-width:1080px) {html { font-size:337px !important;}}
+* {margin: 0;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+a,button,input,dd,dl{-webkit-tap-highlight-color:rgba(255,0,0,0);}
+/* HTML5 display-role reset for older browsers */
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display: block;}
+body{ max-width:750px;/* 用 ascii 字符表示，使得在任何编码下都无问题 */font-family: '微软雅黑',YaHei,tahoma,Helvetica,"Hiragino Sans GB",Arial,"\5b8b\4f53",sans-serif;color:#333;line-height: 1;}
+ol,ul {list-style: none;}
+blockquote,
+q {  quotes: none;}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}a{ color:#333;text-decoration:none;}a:hover {color: #ff9900;text-decoration:none;}
+/*button,input{border: 0 none transparent;-webkit-appearance: none;outline:0;    border-radius: 0px;}*/
+/*功能性CSS*/
+input[type="checkbox"]{
+   -webkit-appearance:checkbox;
+   box-sizing:border-box;
+   opacity:1;
+}
+input,select{border-radius: 0;-webkit-border-radius:0;}
+.clearfix {*zoom:1;clear:both;}.clearfix:before,.clearfix:after {display:table;line-height:0;content:"";}.clearfix:after {clear:both;}
+/*向左向右*/
+.r{float:right;}
+.l{float:left;}
+input{padding:0;}
+/*显示隐藏*/
+.hide { display:none;}
+.show { display:block;}
+* {margin: 0;}
+html, body {background: #0c0c0c;}
+body{  font-size: 12px;}
+.xing-icon{font-style: normal;color: red;}
+a{text-decoration: none;}
+/*a:active{color: #fff;}*/
+.color3{color: #333333;}
+.color6{color: #666;}
+.color9{color: #999;}
+.colorf{color: #fff;}
+.color82{color: #828282;}
+.colorfdeec4{color: #fdeec4;}
+.font26{font-size:0.116rem;}
+.font28{font-size:0.125rem;}
+.font30{font-size: 0.134rem;}
+.font36{font-size: 0.161rem;}
+.next-btn {display:block;width: 100%;margin: 0.2rem 0 0.3rem;height: 0.28rem;line-height: 0.28rem;text-align: center;color:#fdeec4;border: 1px solid #fdeec4;font-size:0.125rem;}
+.next-btn a{color:#fdeec4;}
+.modt{width: 100%;height: 0.7rem;border: 1px solid #666;overflow: hidden;
+    position: relative;
+    zoom: 1;}
+.modt textarea{border: 0 none;
+    font-size: 0.125rem;
+    line-height: 1.5em;
+    color: #999999;
+    height:0.7rem;
+    background: #0c0c0c;
+    padding-left: 0.05rem;
+    width: 100%;}
+.mod{
+    border: 1px solid #666;
+    margin-bottom: 5px;
+    overflow: hidden;
+    position: relative;
+    zoom: 1;
+    height: 0.272rem;
+}
+.mod1{width: 50%;margin: .2rem 0 0.23rem;}
+.mod input{
+	border: 0 none;
+    font-size: 0.125rem;
+    height: 20px;
+   line-height:0.272rem;
+    width: 100%;
+    color: #999999;
+    height: 0.272rem;
+    background: #0c0c0c;
+    padding-left: 0.05rem;
+}
+.mod input:focus{background-color:#0c0c0c;}
+.Tip-box{width:100%;height:100%;position: fixed;top:0;left:0;transition: all .2s ease;-webkit-transition: all .2s ease;z-index:100;}
+.Tip-k{position:fixed;min-width:1.5rem;max-width:2.7rem;height: 0.5rem;background-color: #cecece;padding:0.05rem 0.01rem;border-radius: 0.1rem;-webkit-border-radius: 0.1rem;text-align: center;line-height: 0.5rem;font-size: 0.12rem;color: #0c0c0c;left:50%;top:50%;margin-top:-1rem;}
+.Tip-k span{displaylay: inline-block;}
+.Tip-k .tip-image{display: inline-block;width: 0.12rem;height: 0.12rem;background:url(../images/tip.png)no-repeat; background-size:100%;}
+.slowin{
+    animation: fade-in 3s;  
+    animation-duration: 1s;  
+    -webkit-animation:fade-in 3s;
+}
+@keyframes fade-in {  
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    20% {opacity: 1;}
+    30% {opacity: 1;}
+    50% {opacity: 1;}
+    70% {opacity: 1;}
+    100% {opacity: 0;}
+}  
+@-webkit-keyframes fade-keyframesin {/*针对webkit内核*/  
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    20% {opacity: 1;}
+    30% {opacity: 1;}
+    50% {opacity: 1;}
+    70% {opacity: 1;}
+    100% {opacity: 0;}
+} 
+.loading{
+    position: fixed;
+    width: 1rem;
+    height: 1rem;
+    top: 50%;
+    left: 50%;
+    background:rgba(0,0,0,0.5);
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
+    border-radius: 0.1rem;
+    -webkit-border-radius:0.1rem;
+    z-index:1;
+    border:1px solid;
+}
+.loading p{
+    width: 1rem;
+    height: 1rem;
+    background: url(../images/loader.png) no-repeat center center;
+    /* border: 1px solid #cbbf9d; */
+    border-radius: 0.1rem;
+    -webkit-border-radius: 0.1rem;
+    background-size: 40% auto;
+    -webkit-transform: rotate(0deg) translateZ(0);
+    -webkit-transition-duration: 0ms;
+    -webkit-animation-name: loading;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes loading {
+ from {
+-webkit-transform:rotate(0deg) translateZ(0);
+}
+to {
+	-webkit-transform: rotate(360deg) translateZ(0);
+}
+}
+@-moz-keyframes loading {
+ from {
+-moz-transform:rotate(0deg) translateZ(0);
+}
+to {
+	-moz-transform: rotate(360deg) translateZ(0);
+}
+}
+.label-br{display:inline-block;width:0.2rem;height:0.2rem;}

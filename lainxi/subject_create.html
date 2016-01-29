@@ -1,0 +1,378 @@
+<?php
+	$htmlData = '';
+	if (!empty($_POST['content'])) {
+		if (get_magic_quotes_gpc()) {
+			$htmlData = stripslashes($_POST['content']);
+		} else {
+			$htmlData = $_POST['content'];
+		}
+	}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>创建话题-后台系统</title>
+<meta charset="utf8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- bootstrap & fontawesome -->
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/font-awesome.min.css">
+<!-- page specific plugin styles -->
+<link rel="stylesheet" href="./css/jquery-ui.min.css">
+<!-- text fonts -->
+<link rel="stylesheet" href="./css/fonts.googleapis.com.css">
+<!-- ace styles -->
+<link rel="stylesheet" href="./css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style">
+<link rel="stylesheet" href="./css/ace-skins.min.css">
+<!--kindeditor start-->
+<link rel="stylesheet" href="./kindeditor/themes/default/default.css" />
+<link rel="stylesheet" href="./kindeditor/plugins/code/prettify.css" />
+<script charset="utf-8" src="./kindeditor/kindeditor.js"></script>
+<script charset="utf-8" src="./kindeditor/lang/zh_CN.js"></script>
+<script charset="utf-8" src="./kin deditor/plugins/code/prettify.js"></script>
+
+<!--kindeditor end-->
+<!--[if lte IE 9]>
+<link rel="stylesheet" href="http://beta.admin.legend.me.cn/ace/css/ace-part2.min.css" class="ace-main-stylesheet" />
+<![endif]-->
+
+<!--[if lte IE 9]>
+<link rel="stylesheet" href="http://beta.admin.legend.me.cn/ace/css/ace-ie.min.css" />
+<![endif]-->
+
+<!-- inline styles related to this page -->
+<!-- ace settings handler -->
+<script src="./js/ace-extra.min.js"></script>
+
+<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+<!--[if lte IE 8]>
+<script src="http://beta.admin.legend.me.cn/ace/js/html5shiv.min.js"></script>
+<script src="http://beta.admin.legend.me.cn/ace/js/respond.min.js"></script>
+<![endif]-->
+    </head>
+    <body class="no-skin">
+        <div id="navbar" class="navbar navbar-default">
+    <script type="text/javascript">
+        try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+    </script>
+
+    <div class="navbar-container" id="navbar-container">
+        <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+            <span class="sr-only">Toggle sidebar</span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+        </button>
+
+        <div class="navbar-header pull-left">
+            <a href="http://beta.admin.legend.me.cn/subject/create?projectKey=singer&jump=1#" class="navbar-brand">
+                <small>
+                    <i class="fa fa-leaf"></i>
+                    创建话题-后台系统
+                </small>
+            </a>
+        </div>
+
+        <div class="navbar-buttons navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+                <li class="light-blue">
+                    <a data-toggle="dropdown" href="http://beta.admin.legend.me.cn/subject/create?projectKey=singer&jump=1#" class="dropdown-toggle">
+                        <img class="nav-user-photo" src="./images/user.jpg">
+                        <span class="user-info">
+                            <small>Welcome</small>
+                            Username
+                        </span>
+
+                        <i class="ace-icon fa fa-caret-down"></i>
+                    </a>
+
+                    <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                        <li>
+                            <a href="http://member.me.cn/">
+                                <i class="ace-icon fa fa-key"></i>
+                                修改密码
+                            </a>
+                        </li>
+
+                        <li classss="divider"></li>
+
+                        <li>
+                            <a href="http://beta.admin.legend.me.cn/user/logout">
+                                <i class="ace-icon fa fa-power-off"></i>
+                                退出登录
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="main-container" id="main-container">
+            <script type="text/javascript">
+                try{ace.settings.check('main-container' , 'findxed')}catch(e){}
+            </script>
+
+            <div id="sidebar" class="sidebar responsive menu-min" data-sidebar="true" data-sidebar-scroll="true" data-sidebar-hover="true">
+    <script type="text/javascript">
+        try{ace.settings.check('sidebarbar' , 'fixed')}catch(e){}
+    </script>
+    <ul class="nav nav-list" style="top: 0px;">
+        <li class="active">
+            <a href="http://beta.admin.legend.me.cn/">
+                <i class="menu-icon fa fa-tachometer"></i>
+                <span class="menu-text">首页</span>
+            </a>
+            <b class="arrow"></b>
+        </li>
+
+        <li>
+            <a href="http://beta.admin.legend.me.cn/subject/create?projectKey=singer&jump=1#" class="dropdown-toggle">
+                <i class="menu-icon fa fa-file-o"></i>
+                <span class="menu-text">
+                    管理一
+                </span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <b class="arrow"></b>
+            <ul class="submenu">
+                <li>
+                    <a href="http://beta.admin.legend.me.cn/subject/create?projectKey=singer&jump=1#">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        管理1
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+                <li>
+                    <a href="http://beta.admin.legend.me.cn/subject/create?projectKey=singer&jump=1#">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        管理2
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="http://beta.admin.legend.me.cn/subject/create?projectKey=singer&jump=1#" class="dropdown-toggle">
+                <i class="menu-icon fa fa-list"></i>
+                <span class="menu-text">
+                    管理二
+                </span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <b class="arrow"></b>
+            <ul class="submenu">
+                <li>
+                    <a href="http://beta.admin.legend.me.cn/subject/create?projectKey=singer&jump=1#">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        管理1
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+                <li>
+                    <a href="http://beta.admin.legend.me.cn/subject/create?projectKey=singer&jump=1#">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        管理2
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+        <i class="ace-icon fa fa-angle-double-right" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+    </div>
+
+    <script type="text/javascript">
+        try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+    </script>
+</div>
+
+            <div class="main-content">
+                <div class="main-content-inner">
+                    <div class="breadcrumbs" id="breadcrumbs">
+                        <script type="text/javascript">
+                            try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+                        </script>
+
+                        <ul class="breadcrumb">
+                            <li>
+                                <i class="ace-icon fa fa-home home-icon"></i>
+                                <a href="http://beta.admin.legend.me.cn/">首页</a>
+                            </li>
+                            <li class="active">Dashboard</li>
+                        </ul>
+                    </div>
+
+                    <div class="page-content">
+                        <div class="ace-settings-container" id="ace-settings-container">
+    <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+        <i class="ace-icon fa fa-cog bigger-130"></i>
+    </div>
+
+    <div class="ace-settings-box clearfix" id="ace-settings-box">
+        <div class="pull-left width-50">
+            <div class="ace-settings-item">
+                <div class="pull-left">
+                    <select id="skin-colorpicker" class="hide">
+                        <option data-skin="no-skin" selected="" value="#438EB9">#438EB9</option>
+                        <option data-skin="skin-1" value="#222A2D">#222A2D</option>
+                        <option data-skin="skin-2" value="#C6487E">#C6487E</option>
+                        <option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+                    </select><div class="dropdown dropdown-colorpicker">		<a data-toggle="dropdown" class="dropdown-toggle" href="http://beta.admin.legend.me.cn/subject/create?projectKey=singer&jump=1#"><span class="btn-colorpicker" style="background-color:#438EB9"></span></a><ul class="dropdown-menu dropdown-caret"><li><a class="colorpick-btn selected" href="http://beta.admin.legend.me.cn/subject/create?projectKey=singer&jump=1#" style="background-color:#438EB9;" data-color="#438EB9"></a></li><li><a class="colorpick-btn" href="http://beta.admin.legend.me.cn/subject/create?projectKey=singer&jump=1#" style="background-color:#222A2D;" data-color="#222A2D"></a></li><li><a class="colorpick-btn" href="http://beta.admin.legend.me.cn/subject/create?projectKey=singer&jump=1#" style="background-color:#C6487E;" data-color="#C6487E"></a></li><li><a class="colorpick-btn" href="http://beta.admin.legend.me.cn/subject/create?projectKey=singer&jump=1#" style="background-color:#D0D0D0;" data-color="#D0D0D0"></a></li></ul></div>
+                </div>
+                <span>&nbsp; 选择皮肤</span>
+            </div>
+
+            <div class="ace-settings-item">
+                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar">
+                <label class="lbl" for="ace-settings-navbar">&nbsp; 固定导航条</label>
+            </div>
+
+            <div class="ace-settings-item">
+                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar">
+                <label class="lbl" for="ace-settings-sidebar">&nbsp; 固定侧边栏</label>
+            </div>
+
+            <div class="ace-settings-item">
+                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs">
+                <label class="lbl" for="ace-settings-breadcrumbs">&nbsp; 固定面包屑</label>
+            </div>
+        </div>
+
+        <div class="pull-left width-50">
+            <div class="ace-settings-item">
+                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl">
+                <label class="lbl" for="ace-settings-rtl">&nbsp; 切换左右布局</label>
+            </div>
+
+            <div class="ace-settings-item">
+                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-add-container">
+                <label class="lbl" for="ace-settings-add-container">&nbsp; 窄屏模式</label>
+            </div>
+            <div class="ace-settings-item">
+                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-hover">
+                <label class="lbl" for="ace-settings-hover">&nbsp; 悬停显示子菜单</label>
+            </div>
+
+            <div class="ace-settings-item">
+                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-compact">
+                <label class="lbl" for="ace-settings-compact">&nbsp; 简洁侧边栏</label>
+            </div>
+
+            <!-- <div class="ace&#45;settings&#45;item"> -->
+            <!--     <input type="checkbox" class="ace ace&#45;checkbox&#45;2" id="ace&#45;settings&#45;highlight" /> -->
+            <!--     <label class="lbl" for="ace&#45;settings&#45;highlight"> 当前菜单标志</label> -->
+            <!-- </div> -->
+        </div>
+    </div>
+</div>
+                        <!-- content start -->
+                        <h3>创建新话题</h3>
+                        <div class="row">
+                            <form name="example" action="http://beta.admin.legend.me.cn/subject/create?projectKey=singer" method="post" class="form-horizontal" enctype="multipart/form-data">
+                                <table>
+                                    <tbody><tr><td>标题</td><td><input type="text" name="title"></td></tr>
+                                    <tr>
+										<td>内容</td>
+										<td>
+											<!--<input type="text" name="content">-->
+											<textarea name="content" style="width:700px;height:200px;visibility:hidden;"><?php echo htmlspecialchars($htmlData); ?></textarea>
+										</td>
+									</tr>
+                                    <tr><td>话题列表图片</td><td><input type="file" name="iconfile"></td></tr>
+                                    <tr><td>素材</td><td><input type="file" name="mediafile"></td></tr>
+                                    <tr>
+                                        <td>类型</td>
+                                        <td>
+                                                                                        <select name="type">
+                                                                                                <option value="normal">normal</option>
+                                                                                                <option value="singer">singer</option>
+                                                                                                <option value="video">video</option>
+                                                                                            </select>
+                                                                                    </td>
+                                    </tr>
+                                    <tr><td>权重</td><td><input type="text" name="weight" value="0"></td></tr>
+                                    <tr>
+                                        <td>激活</td>
+                                        <td>
+                                            <input type="radio" name="isActive" value="1" checked="checked">是&nbsp;&nbsp;
+                                            <input type="radio" name="isActive" value="0/">否
+                                        </td>
+                                    </tr>
+                                    <tr><td>阅读数</td><td><input type="text" name="readNum" value="0"></td></tr>
+                                    <tr><td>扩展</td><td><input type="text" name="ext"></td></tr>
+                                    <tr><td colspan="2"><input type="submit" value="提交"></td></tr>
+                                </tbody></table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="http://beta.admin.legend.me.cn/subject/create?projectKey=singer&jump=1#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+                <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+            </a>
+        </div>
+
+        <!-- basic scripts -->
+
+<!--[if !IE]> -->
+<script src="./js/jquery.2.1.1.min.js"></script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script src="http://beta.admin.legend.me.cn/ace/js/jquery.1.11.1.min.js"></script>
+<![endif]-->
+
+<!--[if !IE]> -->
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='http://beta.admin.legend.me.cn/ace/js/jquery.min.js'>"+"<"+"/script>");
+</script>
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='http://beta.admin.legend.me.cn/ace/js/jquery1x.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+<script type="text/javascript">
+if('ontouchstart' in document.documentElement) document.write("<script src='http://beta.admin.legend.me.cn/ace/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+</script>
+<script src="./js/bootstrap.min.js"></script>
+<script>
+    KindEditor.ready(function(K) {
+        var editor1 = K.create('textarea[name="content"]', {
+            cssPath : './kindeditor/plugins/code/prettify.css',
+            uploadJson : './kindeditor/php/upload_json.php',
+            fileManagerJson : './kindeditor/php/file_manager_json.php',
+            allowFileManager : true,
+            items:[
+                'image'
+            ]
+        });
+        prettyPrint();
+    });
+</script>
+<!-- page specific plugin scripts -->
+
+<!--[if lte IE 8]>
+<script src="http://beta.admin.legend.me.cn/ace/js/excanvas.min.js"></script>
+<![endif]-->
+
+<script src="./js/jquery-ui.min.js"></script>
+<script src="./js/jquery.ui.touch-punch.min.js"></script>
+<!-- ace scripts -->
+<script src="./js/ace-elements.min.js"></script>
+<script src="./js/ace.min.js"></script>
+<script src="./js/common.js"></script>
+</body>
+</html>

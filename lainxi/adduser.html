@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>《我是歌手》大众听审团报名</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="http://<?=$config['sdomain']?>/css/common.css?v=<?=$staticVersion?>">
+        <link rel="stylesheet" href="http://<?=$config['sdomain']?>/css/baoming.css?v=<?=$staticVersion?>">
+        <script src="http://<?=$config['sdomain']?>/js/city.js?v=<?=$staticVersion?>"></script>
+        <?php include 'common/baidu.html';?>
+    </head>
+    <body onload="init();">
+        <div class="tc-box hide">
+            <div class="tc-tip">
+                <p class="font30 tip-text">报名信息一旦提交将不可更改</p>
+                <p><a class="back font30 color6" href="javascript:void(0);">我再看看，返回</a><a href="javascript:void(0);" class="next font30 colorfdeec4">确认无误，下一步</a></p>
+            </div>
+            <div class="loading hide"><p></p></div>
+        </div>
+        <div class="con">
+          <h1>报名场次：<?=$stageInfo['stageName']?></h1>
+            <form action="" class="form1 show">
+                <h2 class="font30 colorf">第一部分 基本资料</h2>
+                <div class="con-p">
+                    <label class="label-tip" for="">姓名：</label>
+                    <div class="mod">
+                        <input type="text" name="name" id="name" maxlength="10">
+                    </div>
+                </div>
+                <div class="con-p">
+                    <label class="label-tip" for="">性别：</label>
+                    <p class="sex">
+                        <span class="pay_list_c1">
+                            <input type="radio" name="gender" id="male" value="1" class="radioclass gender">
+                        </span>
+                        <label class="label-br" for="male">男</label>
+                    </p>
+                    <p class="sex female">
+                        <span class="pay_list_c1">
+                            <input type="radio" id="female" name="gender" value="2" class="radioclass gender">
+                        </span>
+                        <label for="female" class="label-br">女</label>
+                    </p>
+                </div>
+                <div class="con-p sel-div birth">
+                    <label class="label-tip" for="">出生日期：</label>
+                    <p class="year">
+                        <em class="san-icon"></em>
+                        <span class="m-sel">选择</span>
+                        <select name="year" id="year"></select>
+                        <span class="colorf">年</span>
+                    </p>
+                    <p class="month">
+                        <em class="san-icon"></em>
+                        <span class="m-sel">选择</span>
+                        <select name="month" id="month">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                        </select>
+                        <span class="colorf">月</span>
+                    </p>
+                    <p class="day">
+                        <em class="san-icon"></em>
+                        <span class="m-sel">选择</span><select name="day" id="day"></select>
+                        <span class="colorf">日</span>
+                    </p>
+                </div>
+                <div class="con-p sel-div">
+                    <label class="label-tip" for="">年龄：</label>
+                    <p class="sex label-br" id="ageshow"></p>
+                </div>
+                <div class="jianhu hide">
+                    <div class="con-p">
+                        <label class="label-tip" for="">监护人姓名:</label>
+                        <div class="mod">
+                            <input type="text" name="jhname" id="jhname">
+                        </div>
+                    </div>
+
+                    <div class="con-p sel-div jhbrith">
+                        <label class="label-tip" for="">监护人出生日期：</label>
+                        <p class="jhyear">
+                            <em class="san-icon"></em>
+                            <span class="m-sel">请选择</span>
+                            <select name="year" id="jhyear"></select>
+                            <span class="colorf">年</span>
+                        </p>
+                        <p class="jhmonth">
+                            <em class="san-icon"></em>
+                            <span class="m-sel">请选择</span><select name="month" id="jhmonth"></select>
+                            <span class="colorf">月</span>
+                        </p>
+
+                    </div>
+                    <div class="con-p">
+                        <label class="label-tip" for="">监护人关系:</label>
+                        <div class="mod">
+                            <input type="text" name="jhgx" id="jhgx">
+                        </div>
+                    </div>
+                    <div class="con-p">
+                        <label class="label-tip" for="">监护人联系电话:</label>
+                        <div class="mod">
+                            <input type="number" name="jhphone" id="jhphone">
+                        </div>
+                    </div>
+                    <div class="zjcode">
+                        <div class="con-p sel-div">
+                            <label class="label-tip" for="">监护人证件类型:</label>
+                            <p class="jhzjcode">
+                                <em class="san-icon"></em>
+                                <span class="m-sel" data-val ="1">身份证号</span>
+                                <select name="jhzjcode" id="jhzjcode">
+                                    <option value="身份证号">身份证号</option>
+                                    <option value="护照号">护照号</option>
+                                    <option value="军官证">军官证</option>
+                                </select>
+                            </p>
+                        </div>
+                        <div class="con-p">
+                            <label class="label-tip" for="">监护人证件号:</label>
+                            <div class="mod">
+                                <input type="text" name="jhcode" id="jhcode">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="zjcode">
+                    <div class="con-p sel-div">
+                        <label class="label-tip" for="">证件类型：</label>
+                        <p class="zjidcode">
+                            <em class="san-icon"></em>
+                            <span class="m-sel" data-val="1">身份证号</span>
+                            <select name="jhzjcode" id="jhzjcode">
+                                <option value="身份证号">身份证号</option>
+                                <option value="护照号">护照号</option>
+                                <option value="军官证">军官证</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="con-p">
+                        <label class="label-tip" for="">证件号：</label>
+                        <div class="mod">
+                            <input type="text" name="idcode" id="idcode" maxlength="18">
+                        </div>
+                    </div>
+                </div>
+                <div class="con-p">
+                    <label class="label-tip" for="">工作/公司名:</label>
+                    <div class="mod">
+                        <input type="text" name="job" id="job" maxlength="50">
+                    </div>
+                </div>
+                <div class="con-p">
+                    <label class="label-tip" for="">专业/学校名:</label>
+                    <div class="mod">
+                        <input type="text" name="school" id="school" maxlength="50">
+                    </div>
+                </div>
+
+                <div class="con-p sel-div">
+                    <label class="label-tip" for="">国籍：</label>
+                    <p class="country">
+                        <em class="san-icon"></em>
+                        <span class="m-sel">中国</span>
+                        <select name="province" id="country">
+                        </select>
+                    </p>
+                </div>
+
+                <div class="con-p sel-div">
+                    <label class="label-tip" for="">籍贯：</label>
+                    <p class="pro">
+                        <em class="san-icon"></em>
+                        <span class="m-sel">请选择</span>
+                        <select name="province" id="pro">
+                        </select>
+                    </p>
+                </div>
+                <div class="con-p sel-div procity">
+                    <label class="label-tip" for="">现居地:</label>
+                    <p class="province">
+                        <em class="san-icon"></em>
+                        <span class="m-sel">请选择</span>
+                        <select name="province" id="province">
+                        </select>
+                    </p>
+                    <p class="city">
+                        <em class="san-icon"></em>
+                        <span class="m-sel">请选择</span>
+                        <select name="city" id="city">
+                        </select>
+                    </p>
+                </div>
+
+                <div class="con-div">
+                    <p class="label-tip" for="">提供几张您的靓照给导演组看看吧：</p>
+                    <div class="sc-img">
+                        <div class="photo js-photo showLine">
+                            <em class="shizih"></em><em class="shizis"></em>
+                            <img id="portrait0">
+                        </div>
+                        <div class="photo js-photo hide">
+                            <em class="shizih"></em><em class="shizis"></em>
+                            <img id="portrait1">
+                            <input type="button" name="photo" id="photoUpload1" class="imgbtn">
+                        </div>
+                        <div class="photo js-photo hide">
+                            <em class="shizih"></em><em class="shizis"></em>
+                            <img id="portrait2">
+                            <input type="button" name="photo" id="photoUpload2" class="imgbtn">
+                        </div>
+                        <div class="photo js-photo hide">
+                            <em class="shizih"></em><em class="shizis"></em>
+                            <img id="portrait3">
+                            <input type="button" name="photo" id="photoUpload3" class="imgbtn">
+                        </div>
+                        <div class="photo js-photo hide last">
+                            <em class="shizih"></em><em class="shizis"></em>
+                            <img id="portrait4">
+                            <input type="button" name="photo" id="photoUpload4" class="imgbtn">
+                        </div>
+                    </div>
+                </div>
+                <div class="con-div">
+                    <p class="label-tip" for="">录制一段小视频一展您的歌喉给导演组看看吧：</p>
+                    <div class="sc-radio">
+                        <div class="photo radio">
+                            <em class="shizih"></em><em class="shizis"></em>
+                            <div class="video-box"></div>
+                            <div class="radiobtn"></div>
+                        </div>
+                        <p class="cha-btn hide"><a href="javascript:void(0)" >修改视频</a></p>
+                    </div>
+
+                </div>
+                <p class="next-btn"><a href="javascript:void(0)" >下一步</a></p>
+            </form>
+            <form action="" class="form2 hide">
+                <h2 class="font30 colorf">第二部分 基本问题</h2>
+                <div class="con-p">
+                    <label class="label-tip" for="">您最喜欢的歌手:</label>
+                    <div class="mod">
+                        <input type="text" name="likeSinger" maxlength="10" id="likeSinger">
+                    </div>
+                </div>
+                <div class="con-p">
+                    <label class="label-tip" for="">您最喜欢的一首歌？为什么喜欢这首歌？</label>
+                    <div class="modt">
+                        <textarea rows="3" cols="20" name="likeSong" id="likeSong" maxlength="500"></textarea>
+                    </div>
+                </div>
+                <div class="con-p">
+                    <label class="label-tip" for="">您认为歌手最需要具备什么条件？</label>
+                    <div class="modt">
+                        <textarea rows="3" cols="20" name="singerCond" id="singerCond" maxlength="500"></textarea>
+                    </div>
+                </div>
+                <div class="con-p">
+                    <label class="label-tip" for="">现场的歌手什么样的表现才能获得您的选票？</label>
+                    <div class="modt">
+                        <textarea rows="3" cols="20" name="singerVoteCond" id="singerVoteCond" maxlength="500"></textarea>
+                    </div>
+                </div>
+                <div class="con-p">
+                    <label class="label-tip" for="">您申请参加节目的理由？</label>
+                    <div class="modt">
+                        <textarea rows="3" cols="20" name="signReason" id="signReason" maxlength="500"></textarea>
+                    </div>
+                </div>
+                <p class="next-btn"><a href="javascript:void(0)" >下一步</a></p>
+                <p class="backfrist"><a href="javascript:void(0)">返回上一步</a></p>
+            </form>
+        </div>
+        <script src="http://<?=$config['sdomain']?>/js/zepto.min.js?v=<?=$staticVersion?>"></script>
+        <script src="http://<?=$config['sdomain']?>/js/vendor/device.min.js?v=<?=$staticVersion?>"></script>
+        <script src="baoming.js"></script>
+        <script src="http://<?=$config['sdomain']?>/js/tipBox.js?v=<?=$staticVersion?>"></script>
+        <script src="http://<?=$config['sdomain']?>/js/country.js?v=<?=$staticVersion?>"></script>
+    </body>
+</html>

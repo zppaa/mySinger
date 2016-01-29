@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" class="ui-loading">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>报名</title>
+        <link rel="stylesheet" media="screen" href="style/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" media="screen" href="style/common.css">
+        <link rel="stylesheet" media="screen" href="style/apply.css">
+    </head>
+    <body>
+        <div data-role="page" id="pagezero" class="page">
+            <div data-role="main" class="main ui-content" style="display:none;">
+                <div class="gg-box">
+                    <div class="app l">
+                        <img src="images/app_icon.png" alt="">
+                        <p class="appname ">下载我是歌手APP</p>
+                        <p>传视频提高报名成功率</p>
+                    </div>
+                    <a class="r" href="http://<?=$config->domain?>/download?src=h5.welcome">立即下载</a>
+                </div>
+
+                <div class="con">
+                    <p class="gs">
+                        <img src="images/gs.png" alt="" />
+                    </p>
+                    <p class="bg-t">
+                        <img src="images/bg_t.png" alt="" />
+                    </p>
+                    <p class="bm-btn">
+                        <a href="#pageone" class="submit0" onclick="" data-transition="slide" role="button">立即报名</a>
+                    </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div data-role="page" id="pageone" class="page">
+            <div class="header" style="display:none;">
+                <img src="images/img-iocn.jpg" alt="" />
+                <div class="step">
+                    <ul>
+                        <li class="active"><span>基本资料</span></li>
+                        <li>></li>
+                        <li><span>基本问题</span></li>
+                        <li>></li>
+                        <li><span>报名成功</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="main" class="ui-content clearfix" style="display:none;">
+                <form class="cmxform" id="form1">
+                    <fieldset class="ui-widget ui-widget-content ui-corner-all">
+                        <fieldset data-role="fieldcontain">
+                            <label for="cnname">姓名</label>
+                            <input id="cnname" name="cnname" type="text" >
+                        </fieldset>
+                        <fieldset data-role="fieldcontain">
+                            <label for="mobile">手机号</label>
+                            <input id="mobile" name="mobile" type="number">
+                        </fieldset>
+                        <fieldset data-role="fieldcontain">
+                            <label for="cardType">证件类型</label>          
+                            <select name="cardType" id="cardType">
+                                <option value="1">身份证</option>
+                                <option value="2">军官证</option>
+                                <option value="3">护照</option>
+                                <option value="4">港澳通行证</option>
+                                <option value="5">5台湾通行证</option>
+                            </select>
+                        </fieldset>
+                        <fieldset data-role="fieldcontain" class="card">
+                            <label for="cardNum">证件号码</label>
+                            <input id="cardNum" name="cardNum" type="text">
+                        </fieldset>
+                        <div class="byCard" style="display:none" >
+                            <fieldset data-role="fieldcontain">
+                                <label>性别</label>
+                                <div class="ui-controlgroup-controls">
+                                        <label for="female" data-transition="slide"  class="ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-last-child">女</label>
+                                        <input type="radio" name="sex" id="female" value="2">
+                                        <label for="male" data-transition="slide"  class="ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-radio-off">男</label>
+                                        <input type="radio" name="sex" id="male" value="1" checked="checked">
+                                </div>
+                            </fieldset> 
+                            <fieldset data-role="fieldcontain">
+                                <label for="age">出生日期</label>
+                                <input type="date" class="date" id="age" name="age">
+                            </fieldset>
+                            <fieldset data-role="fieldcontain">
+                                <label>年龄</label>
+                                <input id="ageshow" type="text" class="ui-widget-content">
+                            </fieldset>
+                            <fieldset data-role="fieldcontain">
+                                <label for="country">国籍</label>
+                                <select name="country" id="country"></select>
+                            </fieldset>
+                            <fieldset data-role="fieldcontain">
+                                <label for="pro">籍贯</label>
+                                <select name="nativePlace" id="pro"></select>
+                            </fieldset>
+                        </div>
+                        <div class="jianhu" style="display:none;">
+                            <fieldset data-role="fieldcontain">
+                                <label for="guardianName">监护人姓名</label>
+                                <input id="guardianName" name="guardianName" type="text" class="ui-widget-content">
+                            </fieldset>
+                            <fieldset data-role="fieldcontain">
+                                <label for="guardianRelate">监护人关系</label>
+                                <input id="guardianRelate" name="guardianRelate" type="text" class="ui-widget-content">
+                            </fieldset>
+                            <fieldset data-role="fieldcontain">
+                                <label for="guardianMobile">监护人手机号</label>
+                                <input id="guardianMobile" name="guardianMobile" type="number" class="ui-widget-content">
+                            </fieldset>
+                            <fieldset data-role="fieldcontain">
+                                <input name="guardianCardType" value="1" type="hideen" style="display:none;">
+                            </fieldset>
+
+                            <fieldset data-role="fieldcontain">
+                                <label for="guardianCardNum">监护人身份证</label>
+                                <input id="guardianCardNum" name="guardianCardNum" type="text" class="ui-widget-content">
+                            </fieldset>
+
+                        </div>    
+                        <div class="jobschool">
+                            <fieldset data-role="fieldcontain">
+                                <label for="jobCompany">工作/公司</label>
+                                <input id="jobCompany" name="jobCompany" type="text">
+                            </fieldset>
+                            <fieldset data-role="fieldcontain">
+                                <label for="school">专业/学校</label>
+                                <input id="school" name="school" type="text">
+                            </fieldset>
+                            <fieldset data-role="fieldcontain">
+                                <label for="address">现居地</label>            
+                                <input id="address" name="address" type="text">
+                                <!-- <select name="province" id="province" onchange="toCity();"></select> -->
+                                <!-- <label for="city"></label> -->
+                                <!-- <select name="city" id="city"></select> -->
+                            </fieldset>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="photo">
+                    <div class="sc-img">
+                        <div class="img-tip">
+                         <em class="cam-icon"></em>
+                         <p class="p1">上传照片</p>
+                         <p class="p2">有创意的生活照</p>
+                        </div>
+                        <img id="uploadPreview">
+                        <input id="image0" name="images0" type="file"  accept="image/*" />
+                    </div>
+                </div>
+                <div data-role="popup" id="transitionExample0" class="ui-content ui-popup ui-body-a ui-overlay-shadow ui-corner-all" data-theme="a">
+                    <p></p>
+                </div>
+                <a class="submit1" href="javascript:void(0);"  data-transition="slidedown"  data-position-to="window" >下一步</button>
+                <a class="onepage" style="display:none;" data-role="button" data-transition="slide"></a>
+            </div>
+        </div>
+        <div data-role="page" id="pagethree" class="page">
+        <div class="header" style="display:none;">
+            <div class="step">
+                <ul>
+                    <li><span>基本资料</span></li>
+                    <li>&gt;</li>
+                    <li class="active"><span>基本问题</span></li>
+                    <li>&gt;</li>
+                    <li><span>报名成功</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="main" class="ui-content" style="display:none;">
+            <form id="form3">
+                    <p>
+                        <label for="likeSinger">您最喜欢的歌手(只能填写一个歌手的名字)：</label>
+                        <input id="likeSinger" name="likeSinger" type="text">
+                    </p>
+                    <p>
+                        <label for="likeSong">您最喜欢的一首歌，为什么喜欢这首歌？</label>
+                        <textarea id="likeSong" name="likeSong"></textarea>
+                    </p>
+                    <p>
+                        <label for="singerCond">您认为歌手最需具备什么？</label>
+                        <textarea id="singerCond" name="singerCond"></textarea>
+                    </p>
+                    <p>
+                        <label for="singerVoteCond">现场的歌手什么样的表现才能获得您的选票？</label>
+                        <textarea id="singerVoteCond" name="singerVoteCond" ></textarea>
+                    </p>
+                    <p>
+                        <label for="signReason">您参加节目的理由？</label>
+                        <textarea id="signReason" name="signReason"></textarea>
+                    </p>
+                    <div data-role="popup" id="transitionExample2" class="ui-content ui-popup ui-body-a ui-overlay-shadow ui-corner-all" data-theme="a">
+                        <p></p>
+                    </div>
+                    <a class="submit2" href="#pageone"data-transition="slide" data-direction="reverse" >上一步</a>
+                    <a class="submit3" href="javascript:void(0);" data-position-to="window" >下一步</a>            </form>
+            </div>
+        </div>
+ <script src="lib/jquery-2.1.1.min.js"></script>
+ <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+ <script src="js/country.js"></script>
+ <script src="js/apply.js"></script>
+ <script>
+     $(function(){
+            $(".ui-loading .ui-loader").show();
+            $(".ui-loader").show();
+     });
+window.onload = function () {
+    $(".ui-loading .ui-loader").hide();
+    $(".ui-loader").hide();
+    $(".page .header").show();
+    $(".page .ui-content").show();
+}
+
+ </script>
+</body>
+</html>
+

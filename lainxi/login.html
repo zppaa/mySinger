@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>报名</title>
+	<link rel="stylesheet" media="screen" href="style/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" media="screen" href="style/common.css">
+	<link rel="stylesheet" media="screen" href="style/baoming.css">
+	<style type="text/css">
+	.animit{overflow-y: hidden;
+	background: pink;
+     width: 200px;
+     /*  Webkit内核浏览器：Safari and Chrome*/
+     -webkit-transition-property: all;
+     -webkit-transition-duration: .5s;
+     -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+     /*  Mozilla内核浏览器：firefox3.5+*/
+     -moz-transition-property: all;
+     -moz-transition-duration: .5s;
+     -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+     /*  Opera*/
+     -o-transition-property: all;
+     -o-transition-duration: .5s;
+     -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+     /*  IE9*/
+     -ms-transition-property: all;
+     -ms-transition-duration: .5s;
+     -ms-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);}
+ .slider {
+     
+     height: 500px;
+     /* 最大高度 */
+     
+ }
+.closed {
+     max-height: 0;
+ }
+
+
+
+ .moveTop{display: none;opacity: 1;animation:moveTop 2s ease-out;-webkit-animation:moveTop 2s ease-out;}
+.moveDown{display: block;animation:moveTop 2s ease-out;-webkit-animation:moveTop 2s ease-out;}
+keyframes moveTop{
+ 0% { 
+    /*width: 0;*/
+   display: none;opacity: 0;
+    } 
+1% { 
+    /*width: 0;*/
+   display: block;opacity: 0;
+    } 
+ 100%{ 
+   /* width: 100%;*/
+    display: block;opacity: 1;
+    }  
+}
+@-webkit-keyframes moveTop{ 
+0% { 
+    /*width: 0;*/
+   display: none;
+    } 
+ 100%{ 
+    /*width: 100%;*/
+    display: block;
+    } 
+
+ }
+keyframes moveDown{
+ 0% { 
+    /*width: 0;*/
+    display: block;
+    } 
+
+ 100%{ 
+   /* width: 100%;*/
+     display: none;
+    }  
+}
+@-webkit-keyframes moveDown{ 
+0% { 
+    /*width: 0;*/
+    display: block;
+    } 
+ 100%{ 
+    /*width: 100%;*/
+     display: none;
+    } 
+
+ }
+
+.div1,.div2{width: 100px;height: 100px;}
+	</style>
+
+</head>
+<body class="ui-loading">
+<div class="div1">
+div1	
+</div>
+<div class="div2">
+	div2
+</div>
+    <button class="btn">点击看看</button>
+
+<script src="lib/jquery-2.1.1.min.js"></script>
+<script src="lib/jquery-ui.min.js"></script>
+<script src="lib/jquery.validate.min.js"></script>
+<script src="lib/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/country.js"></script>
+<script src="js/city.js"></script>
+<script>
+//打开loading组件
+//text(string): 加载提示文字
+//str(string): load的背景颜色样式(取值:a,b,c,d)
+//flag(boolean): 背景是否透明(取值:true透明,false不透明)
+$(".btn").click(function(){
+	$(".div2").addClass('moveTop');
+});
+
+$(function(){
+	$(".ui-loading .ui-loader").show();
+
+});
+ window.onload = function () {
+ 	$(".ui-loading .ui-loader").hide();
+ }
+
+$( document ).on( "mobileinit", function() {
+  $.mobile.loader.prototype.options.text = "loading";
+  $.mobile.loader.prototype.options.textVisible = false;
+  $.mobile.loader.prototype.options.theme = "a";
+  $.mobile.loader.prototype.options.html = "";
+});
+$.mobile.loading( "show", {
+  text: "foo",
+  textVisible: true,
+  theme: "z",
+  html: ""
+})
+
+$.mobile.loading( 'show');
+$(document).on( "click", ".show-page-loading-msg", function() {
+  
+$.mobile.loading( 'show');
+})
+.on( "click", ".hide-page-loading-msg", function() {
+  $.mobile.loading( "hide" );
+});
+</script>
+<script>
+
+
+
+</script>
+</body>
+</html>
+	

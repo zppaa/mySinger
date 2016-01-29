@@ -1,0 +1,194 @@
+@charset "utf-8";
+input[type='number'] {
+        -moz-appearance:textfield;
+    }
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    }
+}
+.tc-down{position:fixed;top:0;left:0;width:100%;height:100%;background:#030408;z-index:100;display:none;}
+.tc-down img{display:block;margin:0.2rem auto; width:84.8%;}
+#pagezero,#pagezero .main{width:100%;height:100%;}
+.con{width:100%;height:100%;margin: 0 auto;clear:both;overflow:hidden;background:url(../images/bg1.jpg) no-repeat center top;background-size:100% auto;position: relative;}
+.bm-btn {position: relative;width: 70%;margin: 0 auto;height:100%;margin-top:-1em;}
+.bm-btn a{position: absolute;width: 100%;height:0.39rem ;line-height:0.39rem;text-align:center;top:0.4rem;left: 0;font-size:0.168rem;color:#7e5f3b;font-weight:bold;background:url(../images/b_btn.png);background-size:100% 100%;}
+.gg-box{position: fixed;width: 100%;height: 0.625rem;background: #20915b;bottom: 0;left: 0;z-index:1000;}
+.gg-box img{float: left;width: 0.445rem;height: 0.445rem;margin: 0.1rem 0.05rem 0 0.1rem;}
+.gg-box .app p{color: #c8c8c8;line-height: 0.2rem;width:1.9rem;}
+.gg-box .app .appname{font-size: 0.1rem;color: #c8c8c8;margin-top:0.1rem;}
+.gg-box a{display: block;float: right;font-size: 0.134rem;color: #fdeec4;width: 1rem;height: 0.303rem; border-radius:1rem;-webkit-border-radius:1rem;line-height:  0.303rem;text-align: center;border: 1px solid #fdeec4;background: #167344;margin: 0.15rem 0.1rem 0 0;}
+.gs img{width: 2rem;display: block;margin: 0.3rem auto 0.2rem;}
+.main .gg-box a:visited{color:#fff;}
+@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone4/4s */
+.gs img{width: 2rem;display: block;margin: 0 auto 0.2rem;}
+ }
+ .ui-page-theme-a a:visited, html .ui-bar-a a:visited, html .ui-body-a a:visited, html body .ui-group-theme-a a:visited{color:#fff;}
+.ui-page-theme-a .bm-btn a:visited{color:#7e5f3b;}
+.bg-t img{width:2.3rem;height:1rem;display:block;margin:0 auto;}
+.tm-btn img{width:2rem;height:0.5rem;}
+
+.clearfix{clear:both}
+.header img{width:100%;}
+.header .step{width: 100%;
+    height: 4em;
+    margin-top: -0.3em;
+    background-image:url(../images/head-bg.jpg);
+    font-size:0.13rem;
+}
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{text-shadow:none;}    
+.header ul{overflow:hidden;margin:0;padding:0;width:90%;margin:0 auto;}
+.header ul li{float:left;list-style:none;width:20%;height: 4em;
+    line-height: 4em;color:#fff;text-align:center;}
+.header ul li.active{color:#30be7a;}
+.ui-page{background-color:#f1f1f1;font-size: 0.12rem;
+    font-family: "微软雅黑";}
+.ui-content{padding:0;}
+.ui-mobile .card,.byCard,.jianhu,.jobschool{margin-bottom:0.8em;}
+.submit1,.submit2,.submit3{
+    display: block;
+    width: 70%;
+    margin: 1em auto 2em;
+    height: 2.5em;
+    border-radius: 0.3em;
+    text-align: center;
+    line-height: 2.5em;
+    text-decoration: none;
+    color: #fff;
+    display:block;
+    background: #30be7a;
+    width: 75%;
+    margin: 1em auto 2em;}
+    .ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a{color:#fff;}
+.ui-field-contain, .ui-mobile fieldset.ui-field-contain{
+background:#fff;padding:0.5em 1em;
+border-bottom:1px solid #dcdcdc;
+}
+.ui-content .ui-field-contain label,.ui-field-contain .ui-input-text{float:left;font-size:0.125rem;}
+.ui-content .ui-field-contain label{
+display:block;
+line-height:2.3em;
+width:27%;
+color:#191919;
+}
+.ui-content .ui-field-contain .ui-radio label{
+    line-height:1em;
+    color:#8c8c8c;
+}
+#cnname{color:#191919;}
+.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a{color:#8c8c8c;font-size:0.125rem;}
+.ui-page-theme-a .ui-btn:focus, html .ui-bar-a .ui-btn:focus, html .ui-body-a .ui-btn:focus, html body .ui-group-theme-a .ui-btn:focus, html head+body .ui-btn.ui-btn-a:focus, .ui-page-theme-a .ui-focus, html .ui-bar-a .ui-focus, html .ui-body-a .ui-focus, html body .ui-group-theme-a .ui-focus, html head+body .ui-btn-a.ui-focus, html head+body .ui-body-a.ui-focus{-webkit-box-shadow:none;box-shadow:none;}
+.ui-shadow-inset,.ui-shadow{box-shadow:none;-webkit-box-shadow:none;border-style:none;}
+.ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head+body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head+body .ui-btn.ui-btn-a:visited{background-color:#fff;}
+.ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after{
+width:10px;height:15px;
+background-color:#fff;
+}
+.ui-icon-carat-d:after{background-image:url(../images/jt.jpg);background-size:100% 100%;top:1.6em;}
+.ui-page-theme-a .ui-btn:active, html .ui-bar-a .ui-btn:active, html .ui-body-a .ui-btn:active, html body .ui-group-theme-a .ui-btn:active, html head+body .ui-btn.ui-btn-a:active{background-color:#fff;color:#8c8c8c;}
+.ui-page-theme-a .ui-btn:hover, html .ui-bar-a .ui-btn:hover, html .ui-body-a .ui-btn:hover, html body .ui-group-theme-a .ui-btn:hover, html head+body .ui-btn.ui-btn-a:hover{background-color:#fff;color:#8c8c8c;}
+.ui-select .ui-btn>span:not(.ui-li-count){text-align:left;}
+.ui-select .ui-btn{float: left;color:#8c8c8c;font-weight: normal;
+    margin-top: -0.2em;
+    width:58%;
+    font-size: 0.125rem;
+padding-left:0.4em;
+}
+.ui-mobile label, .ui-controlgroup-label{font-size:0.125rem;}
+
+/*photo*/
+.photo{background-color: #fff;
+    padding: 1em 0;}
+.photo .sc-img{width:128px;height:128px;margin:0 auto;border:1px solid #dcdcdc;border-radius:0.3em;-webkit-border-radius:0.3em;position:relative;    display: table-cell;
+    vertical-align: middle;
+left:6em;
+}
+.img-tip .p1{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 70px;
+    font-size: 0.8em;
+}
+.img-tip .p2{
+    position: absolute;
+    top: 95px;
+    font-size: 0.5em;
+    text-align: center;
+    width: 100%;
+    color: #c7c7c7;
+}
+#image0{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity:0;
+}
+.photo .sc-img img{
+       width: 100%;
+        vertical-align: middle;
+}
+.cam-icon {    position: absolute;
+    width: 2em;
+    height: 1.5em;
+    left: 50%;
+    top: 50%;
+    margin-top: -1.5em;
+    margin-left: -1em;
+    background:url(../images/cam-icon.jpg) no-repeat;
+    background-size:100% 100%;
+}
+.ui-popup{padding:1em;}
+
+#form3 p{background-color: #fff;
+    padding: 0.8em 1em;
+    margin-bottom:2em;
+}
+
+/*radio*/
+.ui-radio .ui-btn.ui-radio-on:after{  
+background-color: #30be7a;
+left:7px;
+}
+.ui-btn, label.ui-btn{border-style:none;}
+.ui-radio{width:30%;float:left;}
+
+.ui-radio .ui-btn:before{
+    content: "";
+    position: absolute;
+    left: 10px;
+    z-index: 100;
+    top: 9px;
+    width:14px;height:14px;
+    border-radius:14px;
+    border:1px solid #30be7a;
+}
+.ui-page-theme-a .ui-radio-on:after, html .ui-bar-a .ui-radio-on:after, html .ui-body-a .ui-radio-on:after, html body .ui-group-theme-a .ui-radio-on:after, .ui-btn.ui-radio-on.ui-btn-a:after{
+    border-color:#fff;
+        border-radius: 100%;
+            top: 17px;
+}
+body, input, select, textarea, button, .ui-btn{font-family:'微软雅黑';)
+.ui-widget {
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 1.1em;
+}
+.ui-tooltip {
+    padding: 8px;
+    position: absolute;
+    z-index: 9999;
+    max-width: 300px;
+    -webkit-box-shadow: 0 0 5px #aaa;
+    box-shadow: 0 0 5px #aaa;
+}
+.ui-btn-corner-all, .ui-corner-all {
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+}
+.ui-corner-all {
+    -webkit-border-radius: .3125em;
+    border-radius: .3125em;
+}
